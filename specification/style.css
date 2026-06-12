@@ -117,8 +117,9 @@ body {
 }
 
 .vehicle-circle img {
-  width: 88%;
-  height: 88%;
+  /* width: 88%; */
+  max-width: 350px;
+  /* height: 88%; */
   object-fit: contain;
 }
 
