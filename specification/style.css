@@ -73,7 +73,11 @@ body {
 .specs-header,
 .spec-row {
   display: grid;
-  grid-template-columns: var(--feat-col) 1fr 1fr;
+  /* grid-template-columns: var(--feat-col) 1fr 1fr; */
+  grid-template-columns: var(--feat-col) 2fr 1fr;
+}
+.spec-row {
+grid-template-columns: var(--feat-col) 2fr 1fr;
 }
 
 /* ─── Header ─────────────────────────────────────────────── */
@@ -83,7 +87,7 @@ body {
 
 /* features (left) header cell */
 .header-cell.features-header {
-  min-width: 376px;
+  min-width: 375px;
   display: flex;
   align-items: flex-end;
   padding-bottom: 0;
@@ -156,7 +160,7 @@ body {
 
 /* ─── Feature cell (left column) ────────────────────────── */
 .feature-cell {
-  min-width: 376px;
+  min-width: 375px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,8 +200,8 @@ body {
     padding: 0 60px;
   }
   .vehicle-circle{
-    width: 108px;
-    height: 108px;
+    width: 108px !important;
+    height: 108px !important;
   }
   .vehicle-circle img{
     max-width: 144px;
@@ -334,67 +338,11 @@ body {
     grid-column: 1 / -1;
   }
 
-  .value-cell.factory-val {
+  /* .value-cell.factory-val {
+    border-right: 1px solid var(--border);
+  } */
+  .value-cell.factory-val div{
+    width: 100%;
     border-right: 1px solid var(--border);
   }
 }
-
-/* ─── Responsive: 576px ──────────────────────────────────── */
-/* @media (max-width: 576px) {
-  :root {
-    --feat-col: 110px;
-  }
-
-  .container {
-    padding: 0 16px;
-  }
-
-  .vehicle-circle {
-    width: clamp(90px, 26vw, 130px);
-    height: clamp(90px, 26vw, 130px);
-    margin-bottom: 8px;
-  }
-
-  .col-label {
-    font-size: 0.58rem;
-    letter-spacing: 0.1em;
-    padding: 10px 0;
-  }
-
-  .feature-cell,
-  .value-cell {
-    padding: 10px 8px;
-    font-size: 0.68rem;
-  }
-
-  .specs-title {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .spec-row {
-    min-height: 48px;
-  }
-} */
-
-/* ─── Responsive: 400px (very small) ────────────────────── */
-/* @media (max-width: 400px) {
-  :root {
-    --feat-col: 90px;
-  }
-
-  .vehicle-circle {
-    width: 80px;
-    height: 80px;
-  }
-
-  .col-label {
-    letter-spacing: 0.08em;
-  }
-
-  .feature-cell,
-  .value-cell {
-    font-size: 0.62rem;
-    padding: 8px 6px;
-  }
-} */
