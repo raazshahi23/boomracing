@@ -98,5 +98,17 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.innerWidth > 767) return;
+      var header = document.querySelector('.specs-header');
+      if (!header) return;
+      var sentinel = document.createElement('div');
+      header.before(sentinel);
+      new IntersectionObserver(function (entries) {
+        header.classList.toggle('is-sticky', !entries[0].isIntersecting);
+      }).observe(sentinel);
+    });
+  </script>
 </body>
 </html>
