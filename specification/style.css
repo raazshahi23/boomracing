@@ -166,7 +166,7 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
-  font-size: clamp(16px, 3vw, 16px);
+  font-size: clamp(14px, 3vw, 16px);
   font-weight: 400;
   color: var(--text-feat);
   border-right: 1px solid var(--border);
@@ -292,8 +292,11 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
     z-index: 100;
     background: #E5E5E5;
     align-items: center;
+    border-bottom: 1px solid var(--border);
   }
-
+.spec-rows {
+  border-top: none;
+}
   .header-cell.features-header {
     display: none;
   }
