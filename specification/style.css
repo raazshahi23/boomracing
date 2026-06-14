@@ -279,6 +279,10 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
 /* ─── Mobile Layout (≤ 767px): stacked rows + sticky header ─ */
 @media (max-width: 767px) {
 
+  body {
+    overflow-anchor: none;
+  }
+
   .specs-header,
   .spec-row {
     grid-template-columns: 1fr 1fr;
@@ -300,6 +304,7 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
   }
 
   .vehicle-circle {
+    overflow-anchor: none;
     transition: max-height 0.3s ease, opacity 0.25s ease, margin-bottom 0.3s ease;
   }
 
@@ -347,3 +352,18 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
     border-right: 1px solid var(--border);
   }
 }
+
+/* 
+  .vehicle-circle {
+    transition: max-height 0.3s ease, opacity 0.25s ease, margin-bottom 0.3s ease;
+    transition: opacity 0.25s ease;
+  }
+ 
+  .specs-header.is-sticky .vehicle-circle {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+ */
+
+

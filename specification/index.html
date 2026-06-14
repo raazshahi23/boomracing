@@ -131,11 +131,10 @@
       if (window.innerWidth > 767) return;
       var header = document.querySelector('.specs-header');
       if (!header) return;
-      var sentinel = document.createElement('div');
-      header.before(sentinel);
-      new IntersectionObserver(function (entries) {
-        header.classList.toggle('is-sticky', !entries[0].isIntersecting);
-      }).observe(sentinel);
+      var triggerY = header.getBoundingClientRect().top + window.scrollY;
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('is-sticky', window.scrollY >= triggerY);
+      }, { passive: true });
     });
   </script>
 </body>
