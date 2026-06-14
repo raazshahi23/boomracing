@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <h1 class="specs-title">Specifications</h1>
+
+      <div class="specs-wrapper">
+
+        <!-- Header: images + column labels -->
+        <div class="specs-header">
+          <div class="header-cell features-header">
+            <span class="col-label">FEATURES</span>
+          </div>
+
+          <div class="header-cell factory-header">
+            <div class="vehicle-circle">
+              <img src="img/stock_side%201.png" alt="Factory Vehicle">
+            </div>
+            <span class="col-label">FACTORY</span>
+          </div>
+
+          <div class="header-cell prospec-header">
+            <div class="vehicle-circle">
+              <img src="img/stock_side%201(1).png" alt="Pro Spec Vehicle">
+            </div>
+            <span class="col-label">PRO SPEC</span>
+          </div>
+        </div>
+
+        <!-- Spec Rows -->
+        <div class="spec-rows">
+
+          <div class="spec-row row-light">
+            <div class="feature-cell">Body</div>
+            <div class="value-cell span-both">ABS</div>
+          </div>
+
+          <div class="spec-row row-dark">
+            <div class="feature-cell">Interior</div>
+            <div class="value-cell span-both">Full ABS</div>
+          </div>
+
+          <div class="spec-row row-light">
+            <div class="feature-cell">Wheelbase</div>
+            <div class="value-cell span-both">385mm / 15.16"</div>
+          </div>
+
+          <div class="spec-row row-dark">
+            <div class="feature-cell">Dimensions</div>
+            <div class="value-cell span-both">
+              Length 576.5mm / 22.69"&nbsp;&nbsp;&nbsp;Width: 218.5mm / 8.6"&nbsp;&nbsp;&nbsp;Height: 145.6mm / 5.73"
+            </div>
+          </div>
+
+          <div class="spec-row row-light">
+            <div class="feature-cell">Track Width</div>
+            <div class="value-cell span-both">186mm / 7.32"</div>
+          </div>
+
+          <div class="spec-row row-dark">
+            <div class="feature-cell">Front Shock Length</div>
+            <div class="value-cell span-both">90mm</div>
+          </div>
+
+          <div class="spec-row row-light">
+            <div class="feature-cell">Rear Damper Length</div>
+            <div class="value-cell factory-val">
+              <div>70mm</div>
+            </div>
+            <div class="value-cell prospec-val">80mm</div>
+          </div>
+
+          <div class="spec-row row-dark">
+            <div class="feature-cell">Rear Coil Spring Length</div>
+            <div class="value-cell factory-val">
+              <div>40mm</div>
+            </div>
+            <div class="value-cell prospec-val">52mm</div>
+          </div>
+
+          <div class="spec-row row-light">
+            <div class="feature-cell">Quick-Release</div>
+            <div class="value-cell span-both">Spring Loaded</div>
+          </div>
+
+          <div class="spec-row row-dark">
+            <div class="feature-cell">Drive System</div>
+            <div class="value-cell span-both">4WD/Rear-Wheel-Drive</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <section>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+    <h2>Hello Test</h2>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.innerWidth > 767) return;
+      var header = document.querySelector('.specs-header');
+      if (!header) return;
+      var triggerY = header.getBoundingClientRect().top + window.scrollY;
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('is-sticky', window.scrollY >= triggerY);
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
