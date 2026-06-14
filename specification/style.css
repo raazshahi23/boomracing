@@ -29,7 +29,7 @@
   --text-feat:   #6b6659;
   --text-val:    #4e4a43;
   --border:      #909D93;
-  --feat-col:    250px;
+  --feat-col:    375px;
   --font:        'Jost', system-ui, sans-serif;
 }
 
@@ -87,7 +87,6 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
 
 /* features (left) header cell */
 .header-cell.features-header {
-  min-width: 375px;
   display: flex;
   align-items: flex-end;
   padding-bottom: 0;
@@ -160,7 +159,6 @@ grid-template-columns: var(--feat-col) 2fr 1fr;
 
 /* ─── Feature cell (left column) ────────────────────────── */
 .feature-cell {
-  min-width: 375px;
   display: flex;
   align-items: center;
   justify-content: center;
